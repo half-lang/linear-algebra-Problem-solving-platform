@@ -1,5 +1,0 @@
-latex转换模块：
-目前仅支持矩阵的转换
-latextrans：接受原始字符串（raw string）返回列表（列表元素为字符串）
-standard_transformation：接受元素为字符串列表返回Matrix
-raw用于处理字符串中的特殊字符，目前暂用不到
