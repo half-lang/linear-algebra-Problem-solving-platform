@@ -1,6 +1,7 @@
 import sympy as sp
 from sympy.abc import *
 from sympy.parsing.latex import parse_latex
+##用于将文本文件转换为sympy公式、目前开发的只包括矩阵形式的latex公式。但对于线性代数求解已经可以满足基本情况。其中对{}的识别较差##
 escape_dict = \
     {
         '\a': r'\a', '\b': r'\b', '\c': r'\c', '\f': r'\f', '\n': r'\n', '\r': r'\r', '\t': r'\t', '\v': r'\v',

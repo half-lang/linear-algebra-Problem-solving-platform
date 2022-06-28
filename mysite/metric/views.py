@@ -5,7 +5,7 @@ from lam.readtext.readtext import readtext
 from lam.metric import schmidt
 
 # Create your views here.
-
+'''斯密德正交化求解模块后端'''
 def SchmidtVectorSolver(request):
     mat = readtext(json.loads(request.body)['matrix'])
     jsdata = schmidt.SchmidtVectorSolver(mat).dict()
