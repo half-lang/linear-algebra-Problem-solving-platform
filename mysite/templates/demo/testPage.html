@@ -8,6 +8,12 @@
 
   <title>test</title>
   {% load static %}
+
+    <!-- jquery -->
+  <script src="{% static 'js/jquery-3.6.0.js' %}"></script>
+
+  <!-- cookieFrame.js for csrf -->
+  <!-- {% csrf_token %} -->
   <script src="{% static 'js/cookieFrame.js' %}"></script>
 </head>
 <body>
@@ -22,19 +28,21 @@
     </p>
   </div>
 
-  <!-- {% csrf_token %} -->
 
-  <!-- jquery -->
-  <script src="{% static 'js/jquery-3.6.0.js' %}"></script>
-
-  <!-- cookieFrame.js for csrf -->
-  <script src="{% static 'js/cookieFrame.js' %}"></script>
-
-  <!-- test -->
   <script>
-    SolverUrl = "{% url 'testSolver' %}";
+      $('#btn').click(() => {
+
+      let initHead = {
+        method: 'POST',
+        mode: 'same-origin',
+        headers: {'X-csrftoken': docCookies.getItem('csrftoken')},
+        body: JSON.stringify({matrix: $('#matrix').val()}),
+      };
+
+      fetch(new Request("{% url 'testSolver' %}", initHead))
+
+    })
   </script>
-  <script src="{% static 'js/lamTest.js' %}"></script>
 </body>
 </html>
 

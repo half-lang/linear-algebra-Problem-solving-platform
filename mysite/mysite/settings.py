@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders', #cors允许跨域请求
-    'demo',
+    # 'demo',
+    'poly',
     'determinant',
     'eigen',
     'quad',

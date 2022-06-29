@@ -9,6 +9,35 @@
   <meta name="keywords" content="">
   <meta name="author" content="lam's contributors">
 
+
+ <style>
+   body {
+
+      background-image: url("");
+
+      background-position: center 0;
+
+      background-repeat: no-repeat;
+
+      background-attachment: fixed;
+
+      background-size: cover;
+
+      -webkit-background-size: cover;
+
+      -o-background-size: cover;
+
+      -moz-background-size: cover;
+
+      -ms-background-size: cover;
+
+}
+ </style>
+
+
+
+
+
   <title>线性代数解题平台</title>
 
   {% load static %}
@@ -64,8 +93,6 @@
           <li class="active">
             <a href="/components/">求解器</a>
           </li>
-          <li><a class="reddot" href="https://www.youzhan.org"
-              onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'V3导航-网站实例'])" target="_blank">网站实例</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
@@ -91,123 +118,69 @@
 
     </div>
   </div>
-  <div class="container bs-docs-container">
+
+
+  <!-- 主内容 -->
+<main>
+  <div class="container">
     <div class="row">
-      <div role="main" class="col-md-9">
+      <!-- 内容 -->
+      <div role="main" class="col-md-10">         
+            <form class="form-horizontal"  >
+              <div class="bs-glyphicons">
+                <ul class="bs-glyphicons-list">
 
-      </div>
-      <div class="col-md-3" role="complementary">
-        <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'DeterminantSolverPage' %}">行列式</a></h3>
+                  </li>
+                
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'PolySolverPage' %}">多项式</a></h3>
+                  </li>
 
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'GESolverPage' %}">线性方程组</a></h3>
+                  </li>
+            
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'DiagSymmetricSolverPage' %}">矩阵分解</a></h3>
+                  </li>
+                
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'LincombinationSolverPage' %}">向量空间</a></h3>
+                  </li>
 
-          <ul class="nav bs-docs-sidenav">
-            <!-- <li class="">
-                <h3>
-                  <a href="#glyphicons">快捷导航</a>
-                </h3>          
-                <ul class="nav">
-                  <li class=""><a href="#glyphicons-glyphs">xxxxxxx</a></li>
-                  <li class=""><a href="#glyphicons-how-to-use">xxxxx</a></li>
-                  <li class=""><a href="#glyphicons-examples">xx</a></li>
+                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
+                    <h3 class="glyphicon-class"><a href="{% url 'testPage' %}">测试页面</a></h3>
+                  </li>
+
                 </ul>
-              </li>    -->
-            <h3>
-              <a href="#glyphicons">快捷导航</a>
-            </h3>
-          </ul>
-          <a class="back-to-top" href="#top">
-            线性方程
-          </a>
-
-          <a href="#" class="bs-docs-theme-toggle" role="button">
-            行列式
-          </a>
-
-        </nav>
+              </div>
+            </form>          
       </div>
+
+        
+
+      
+
+      <!-- 侧边栏 -->
+      <div class="col-md-2" role="complementary">
+        <ul class="list-group">
+          <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
+          <li class="list-group-item"><a href="#">行列式</a></li>
+          <li class="list-group-item"><a href="#">线性方程</a></li>
+          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
+          <li class="list-group-item"><a href="#">二次型</a></li>
+        </ul>
+      </div>
+      
     </div>
   </div>
+</main>
 
-  <div class="bs-glyphicons">
-    <ul class="bs-glyphicons-list">
-      
-        <li>
-          <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="/determinant/Determinantcalculator">行列式展开</a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'GESolverPage' %}">Gauss消元<a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'MLIGSolverPage' %}">筛选法求极大无关组</a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-eur" aria-hidden="true"></span>
-          <span class="glyphicon-class">特征值</span>
-        </li>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <li>
-          <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'eigenvaluePage' %}">特征向量</a></span>
-        </li>
   
-        <li>
-          <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="">矩阵对角化</a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'SchmidtVectorSolverPage' %}">Schmidt正交化</a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'QuadSolverPage' %}">计算二次型的标准形</a></span>
-        </li>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <li>
-          <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'testPage' %}">测试页面</a></span>
-        </li>
-      
-        <li>
-          <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
-          <span class="glyphicon-class"><a href="{% url 'LinequSolverPage' %}">解线性方程</a></span>
-        </li>
-
-        <li>
-          <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-          <span class="glyphicon-class"> <a href="{% url 'InverseSolverPage' %}">矩阵求逆</a></span>
-        </li>
-        
-        <li>
-          <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
-          <span class="glyphicon-class">  <a href="{% url 'LambdaLinSolverPage' %}">含参数线性方程组</a>    </span>
-        </li>
-      
-       
-    </ul>
-  </div>
-
-
-
-  </div>
+ 
+  
 </body>
 
 

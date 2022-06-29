@@ -1,26 +1,26 @@
 from django.shortcuts import render
-from output import slvdeter
 from django.http import JsonResponse
+from linalgpy.determinant import determinant
+from linalgpy.latex.parser import matParser
 import json
 
 import logging
 logging.basicConfig(level=logging.WARN, filename='mylog.txt', filemode='w')
 # Create your views here.
 
-def determinant(request):
-    return render(request, 'demo/deterPage.html')
+def DeterminantSolver(request):
+    mat = matParser(json.loads(request.body)['matrix'])
+    jsdata = determinant.DeterminantSolver(mat).dict()
+    return JsonResponse(jsdata)
 
-def answer(request):
-    mat = json.loads(request.body)['matrix']
-    slvdeter.slvdeter(mat)
-    # 将字符串类型数据转换为json
-    with open('./test_data.json', 'r') as json_file:
-        jsondata = json.load(json_file)
-        logging.debug(jsondata)
-        logging.debug(type(jsondata))
-    return JsonResponse(jsondata)
-
-def HOME(request):
-    return render(request,'deter.html')
+def DeterminantSolverPage(request):
+    return render(request, 'determinant/DeterminantSolverPage.html')
 
 
+def GaussDeterminantSolver(request):
+    mat = matParser(json.loads(request.body)['matrix'])
+    jsdata = determinant.GausseDeterminantSolver(mat).dict()
+    return JsonResponse(jsdata)
+
+def GaussDeterminantSolverPage(request):
+    return render(request, 'determinant/GaussDeterminantSolverPage.html')

@@ -3,15 +3,14 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.eigen,name='eigen'),
-    path('eigenCourse', views.eigenCourse, name='eigenCourse'),
-    path('eigenvectors',views.eigenvectors,name='eigenvectors'),
-    path('eigenvalue',views.eigenvalue,name='eigenvalue'),
-    path('eigencharpoly',views.eigencharpoly,name='eigencharpoly'),
-]
+    path('', views.EigenValueSolverPage, name='EigenValueSolverPage'),
 
-urlpatterns += [
+    path('EigenValueSolverPage', views.EigenValueSolverPage, name='EigenValueSolverPage'),
+    path('EigenValueSolver', views.EigenValueSolver, name='EigenValueSolver'),
 
-    path('eigenvaluePage',views.eigenvaluePage,name='eigenvaluePage')
+    path('EigenVectorSolverPage', views.EigenVectorSolverPage, name='EigenVectorSolverPage'),
+    path('EigenVectorSolver', views.EigenVectorSolver, name='EigenVectorSolver'),
 
+    path('DiagSymmetricSolverPage', views.DiagSymmetricSolverPage, name='DiagSymmetricSolverPage'),
+    path('DiagSymmetricSolver', views.DiagSymmetricSolver, name='DiagSymmetricSolver'),
 ]

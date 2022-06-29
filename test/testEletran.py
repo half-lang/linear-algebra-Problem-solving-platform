@@ -1,6 +1,6 @@
-from lam.mnmatrix.eletran import *
-from lam.mnmatrix.lammatrix import *
-from lam.mnmatrix.mnmatrix import add_matrix, scalar_mul_matrix
+from linalgpy.mnmatrix.eletran import *
+from linalgpy.mnmatrix.lammatrix import *
+from linalgpy.mnmatrix.mnmatrix import add_matrix, scalar_mul_matrix
 
 def test1():
     mat: mn_matrix = circ_matrix()

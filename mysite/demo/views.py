@@ -34,4 +34,7 @@ def csrf_page(request: HttpRequest):
 def testSolver(request: HttpRequest):
     data = json.loads(request.body)['matrix']
     data = {'matrix': data}
+    s = data['matrix']
+    print(s)
+    print(data)
     return JsonResponse(data)

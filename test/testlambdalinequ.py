@@ -2,7 +2,7 @@ import __init__
 import sympy as sp
 from sympy.abc import a
 from sympy import S, sqrt, RR
-from lam.linequ import lambdalinequ, linequsolver
+from linalgpy.linequ import lambdalinequ, linequsolver
 
 def traverse_list(js, key):
     ind = 0

@@ -133,5 +133,4 @@ nohup.out
 mylog.txt
 test_data.json
 .idea/
-
-**/.idea/
+myvenv/

@@ -35,3 +35,24 @@ function createButtonPanel(ele) {
 
     return [layer6, layer7];
 }
+
+function createTogglePanel(ele, id, title, content) {
+    // 生成一个可折叠的面板
+    // ele是面板所在的html元素 id指定折叠模板的id title指定折叠面板的标题 content指定折叠模板的内容
+    // 生成之后可以用id找到该元素的body部分
+
+    let panel = $(`<div class="panel panel-default"><div class="panel-heading"><a data-toggle="collapse" href="#${id}-toggle"></a></div><div id="${id}-toggle" class="panel-collapse collapse"><div class="panel-body" id="${id}"></div></div></div>`);
+
+    panel.find('a').text(title);
+    $(panel).find('.panel-body').append(content);
+    $(ele).append(panel);
+}
+
+function createDefaultPanel(ele, content) {
+    // 生成一个普通面板，是createPanel的改写
+    // ele是面板所在的html元素
+
+    let panel = $(`<div class="panel panel-default"><div class="panel-body"></div></div>`);
+    panel.find('.panel-body').append(content);
+    $(ele).append(panel);
+}

@@ -3,11 +3,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.determinant,name='determinant'),
-    path('answer', views.answer, name='answer'),
+    path('',views.DeterminantSolver,name='DeterminantSolver'),
+
+    path('DeterminantSolverPage', views.DeterminantSolverPage, name='DeterminantSolverPage'),
+    path('DeterminantSolver', views.DeterminantSolver, name='DeterminantSolver'),
+
+    path('GaussDeterminantSolverPage', views.GaussDeterminantSolverPage, name='GaussDeterminantSolverPage'),
+    path('GaussDeterminantSolver', views.GaussDeterminantSolver, name='GaussDeterminantSolver'),
 ]
 
-urlpatterns += [
-    path('Determinantcalculator',views.HOME,name='HOME')
-]
 

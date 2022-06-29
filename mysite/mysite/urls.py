@@ -24,28 +24,12 @@ urlpatterns = [
 
 urlpatterns += [
     path('demo/', include('demo.urls')),
-]
-
-urlpatterns += [
     path('eigen/',include('eigen.urls')),
-]
-
-urlpatterns += [
     path('determinant/',include('determinant.urls')),
-]
-
-urlpatterns+=[
     path('quad/',include('quad.urls')),
-]
-
-urlpatterns += [
     path('linequ/',include('linequ.urls')),
-]
-
-urlpatterns += [
     path('metric/',include('metric.urls')),
+    path('linspace/',include('linspace.urls')),
+    path('poly/',include('poly.urls')),
 ]
 
-urlpatterns += [
-    path('linspace/',include('linspace.urls')),
-]

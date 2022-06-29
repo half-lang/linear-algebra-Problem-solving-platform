@@ -56,9 +56,9 @@
       <!-- 侧边栏 -->
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
-          <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
+          <li class="list-group-item"><h3><a href="#">相关链接</a></h3></li>
+          <li class="list-group-item"><a href="{% url 'HurwitzSolverPage' %}">判断正定矩阵</a></li>
           <li class="list-group-item"><a href="#">行列式</a></li>
-          <li class="list-group-item"><a href="#">线性方程</a></li>
           <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
           <li class="list-group-item"><a href="#">二次型</a></li>
         </ul>
@@ -117,11 +117,7 @@
 
   btn.addEventListener('click', () => {
     // 先删除先前js生成的元素
-    var childs = course_area.childNodes; 
-    for(var i = childs.length - 1; i >= 0; i--) { 
-      course_area.removeChild(childs[i]); 
-    }
-
+    $('#course_area').empty();
     var matrix = document.getElementById('matrix').value;
     myCatch(matrix);
   })

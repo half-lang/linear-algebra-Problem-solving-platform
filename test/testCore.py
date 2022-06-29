@@ -1,5 +1,5 @@
 import __init__
-from lam.core.solver import CoreSolver
+from linalgpy.core.solver import CoreSolver
 
 class MySolver(CoreSolver):
     

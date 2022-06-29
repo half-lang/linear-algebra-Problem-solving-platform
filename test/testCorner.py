@@ -1,7 +1,7 @@
 import sympy as sp
-from lam.mnmatrix.cornermatrix import *
+from linalgpy.mnmatrix.cornermatrix import *
 from sympy.abc import n
-from lam.mnmatrix.eletran import *
+from linalgpy.mnmatrix.eletran import *
 
 tl = sp.Matrix([[1,2], [2,3]])
 tr = sp.Matrix([[1,n], [2,n]])

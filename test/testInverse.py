@@ -1,7 +1,7 @@
 import __init__
 import sympy as sp
 from sympy.matrices.dense import Matrix
-from lam.linequ.inverse import InverseSolver
+from linalgpy.linequ.inverse import InverseSolver
 
 import logging
 logging.basicConfig(level=logging.DEBUG)

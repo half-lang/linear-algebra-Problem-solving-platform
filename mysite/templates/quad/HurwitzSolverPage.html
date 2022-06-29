@@ -1,0 +1,87 @@
+{% extends "csstemplate.html" %}
+
+{% load static %}
+
+{% block head %}
+<title> 线性代数解题平台 </title>
+{% endblock head %}
+
+{% block body %}
+
+<!-- 主内容 -->
+<main>
+  <div class="container">
+    <div class="row">
+      <!-- 内容 -->
+      <div role="main" class="col-md-9">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"> 判断正定(负定)矩阵 </h3>
+          </div>
+
+          <div class="panel-body">
+            <form class="form-horizontal">
+
+              <label for="matrix" class="col-md-2 control-label">输入矩阵</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" id="matrix" value="[[1,3,3],[3,3,3],[3,3,3]]">
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-default" id="submit">提交</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- 答案区域 -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">问题解答</h3>
+          </div>
+
+          <div class="panel-body" id="course-area"></div>
+        </div>
+
+      </div>
+
+      <!-- 侧边栏 -->
+      <div class="col-md-3" role="complementary">
+        <ul class="list-group">
+          <li class="list-group-item"><h3>快捷导航</h3></li>
+          <li class="list-group-item"><a href="{% url 'DeterminantSolverPage' %}">展开行列式</a></li>
+          <li class="list-group-item"><a href="#">线性方程</a></li>
+          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
+          <li class="list-group-item"><a href="#">二次型</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</main>
+
+<!-- 答案生成代码 -->
+
+<script>
+    $('#submit').click(() => {
+      $('#course-area').empty();
+
+      let initHead = {
+        method: 'POST',
+        mode: 'same-origin',
+        headers: {'X-csrftoken': docCookies.getItem('csrftoken')},
+        body: JSON.stringify({matrix: $('#matrix').val()}),
+      };
+
+      fetch(new Request("{% url 'HurwitzSolver' %}", initHead))
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        loadHurwitzSolverData(data, document.getElementById('course-area'));
+        MathJax.typeset();
+      });
+    })
+</script>
+
+{% endblock body %}

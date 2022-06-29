@@ -1,7 +1,7 @@
-from lam.determinant.lammatrix import *
+from linalgpy.determinant.lammatrix import *
 from sympy.abc import x,y,z
 from sympy import refine, Q, Symbol
-from lam.determinant.mnmatrix import scalar_mul
+from linalgpy.determinant.mnmatrix import scalar_mul
 
 def test1():
     id = id_matrix()

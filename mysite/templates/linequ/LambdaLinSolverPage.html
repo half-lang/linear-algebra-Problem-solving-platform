@@ -24,7 +24,7 @@
             <form class="form-horizontal">
               <label for="matrix" class="col-md-1 control-label">增广矩阵</label>
               <div class="col-md-7">
-                <input type="text" class="form-control" id="matrix" value="[[0, 1, 1],[1, 2, 1],[1, 1, 2]]">
+                <input type="text" class="form-control" id="matrix" value="[[a, 1, 1, 1],[1, a, 1, a],[1, 1, a, a^2]]">
               </div>
               <label for="lambda" class="col-md-1 control-label">讨论参数</label>
               <div class="col-md-2">
@@ -44,30 +44,6 @@
           </div>
 
           <div class="panel-body" id="course-area"></div>
-          <!-- <div class="panel-body">
-
-            <div class="panel panel-default" id="start_area" hidden>
-              <div class="panel-body" id="start">
-              </div>
-            </div>
-
-            <div class="panel panel-default" id="deter_area" hidden>
-              <div class="panel-body" id="deter">
-              </div>
-            </div>
-
-            <div class="panel panel-default" id="root_area" hidden>
-              <div class="panel-body" id="root">
-              </div>
-            </div>
-
-            <div id="root_course_area"></div>
-
-            <div class="panel panel-default" id="nozero_area" hidden>
-              <div class="panel-body" id="nozero">
-              </div>
-            </div>
-          </div> -->
         </div>
 
       </div>
@@ -88,8 +64,6 @@
 </main>
 
 <!-- 答案生成代码 -->
-<!-- <script> var SolverUrl = "{% url 'LambdaLinSolver' %}" </script>
-<script src="{% static 'linequ/LambdaLinSolver.js' %}"></script> -->
 
 <script>
     $('#submit').click(() => {

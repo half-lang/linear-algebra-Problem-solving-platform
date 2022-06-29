@@ -1,37 +1,38 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import ensure_csrf_cookie
+from linalgpy.eigen import eigen, diagnoalize
 from django.http import JsonResponse
-from output import slveigen
+from linalgpy.latex.parser import matParser
 import json
 
-import logging
-logging.basicConfig(level=logging.DEBUG,filename='mylog.txt',filemode='w')
-
-def eigen(request):
-    return render(request, 'demo/eigenPage.html')
-
-def eigenCourse(request):
+def EigenValueSolver(request):
     mat = json.loads(request.body)['matrix']
-    jsondata=slveigen.slveigenCourse(mat)
-    logging.debug(jsondata)
-    return JsonResponse(jsondata, safe=False)
+    mat = matParser(mat)
+    jsdata = eigen.EigenValueSolver(mat).dict()
+    return JsonResponse(jsdata)
 
-def eigenvectors(request):
+@ensure_csrf_cookie
+def EigenValueSolverPage(request):
+    return render(request, 'eigen/EigenValueSolverPage.html')
+
+
+def EigenVectorSolver(request):
     mat = json.loads(request.body)['matrix']
-    jsondata=slveigen.slveigenvectors(mat)
+    mat = matParser(mat)
+    jsdata = eigen.EigenVectorSolver(mat).dict()
+    return JsonResponse(jsdata)
 
-    return JsonResponse(jsondata, safe=False)
+@ensure_csrf_cookie
+def EigenVectorSolverPage(request):
+    return render(request, 'eigen/EigenVectorSolverPage.html')
 
-def eigenvalue(request):
+
+def DiagSymmetricSolver(request):
     mat = json.loads(request.body)['matrix']
-    jsondata=slveigen.slveigenvalue(mat)
+    mat = matParser(mat)
+    jsdata = diagnoalize.DiagSymmetricSolver(mat).dict()
+    return JsonResponse(jsdata)
 
-    return JsonResponse(jsondata, safe=False)
-
-def eigencharpoly(request):
-    mat = json.loads(request.body)['matrix']
-    jsondata=slveigen.slveigengetcharpoly(mat)
-
-    return JsonResponse(jsondata, safe=False)
-
-def eigenvaluePage(request):
-    return render(request,'eigenvalue.html')
+@ensure_csrf_cookie
+def DiagSymmetricSolverPage(request):
+    return render(request, 'eigen/DiagSymmetricSolverPage.html')

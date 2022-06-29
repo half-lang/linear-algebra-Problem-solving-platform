@@ -2,8 +2,8 @@ import __init__
 import sympy as sp
 from sympy.abc import x
 from sympy.core.function import Lambda
-from lam.metric.schmidt import Schmidt_orther, SchmidtVectorSolver
-from lam.metric.metricbase import vector_inner, poly_inner
+from linalgpy.metric.schmidt import Schmidt_orther, SchmidtVectorSolver
+from linalgpy.metric.metricbase import vector_inner, poly_inner
 
 import logging
 logging.basicConfig(level=logging.WARN)

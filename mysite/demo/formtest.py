@@ -1,7 +1,7 @@
 import sympy as sp
 from sympy.core.numbers import Rational
-from lam.determinant import course
-from lam.printing import latextext
+from linalgpy.determinant import course
+from linalgpy.printing import latextext
 
 def formtest() -> str:
     a = sp.symbols('a')
