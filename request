@@ -1,0 +1,4 @@
+python==3.8
+Djago==3.2.5
+sympy
+antlr4-python3-runtime==4.7.2
