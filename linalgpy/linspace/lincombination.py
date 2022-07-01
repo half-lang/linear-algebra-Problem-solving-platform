@@ -73,7 +73,10 @@ class LincombinationSolver(CoreSolver):
         js['mat'] = latex(self.mat)
         js['vec'] = latex(self.vec)
         js['coef'] = list(map(latex, self.coef))
-        js['solveset'] = list(map(latex, self.solveset.args[0]))
+        try:
+            js['solveset'] = list(map(latex, self.solveset.args[0]))
+        except:
+            js['solveset']=[]
         ind = 0
         for x in js['coef']: # 处理负号的连接问题，为有负号的字符串加括号
             if x[0] == '-':

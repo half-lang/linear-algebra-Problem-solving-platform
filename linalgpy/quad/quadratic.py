@@ -74,21 +74,20 @@ class HurwitzSolver(CoreSolver):
             self.minorMat.insert(0, mat.copy())
             mat = mat.minor_submatrix(-1, -1)
         self.minor = list(map(lambda x: x.det(), self.minorMat))
-        
         positiveFlag = True  
         for x in self.minor:
             if x < 0:
                 positiveFlag = False
                 break
-        
+
         count = 1
         negativeFlag = True
         for x in self.minor:
+            print(x,x*(-1)**count)
             if x*(-1)**count < 0:
-                positiveFlag = False
+                negativeFlag = False
                 break
             count += 1
-
         if positiveFlag:
             self.result = 'positive'
         elif negativeFlag:

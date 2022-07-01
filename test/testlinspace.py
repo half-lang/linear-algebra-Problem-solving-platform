@@ -6,7 +6,7 @@ from linalgpy.linspace.linspace import LinDependenceSolver, BasisTransSolver
 
 ma = sp.Matrix([[1,2,3,-1], [3,2,1,-1], [2,3,1,1], [2,2,2,-1], [5,5,2,0]])
 mb = sp.Matrix([[1,2,3], [3,2,1], [0,0,0]])
-vec = sp.Matrix([[-1],[-1],[0]])
+vec = sp.Matrix([[-1],[-1],[1]])
 
 def test1():
     for i in range(len(ma)):
@@ -38,4 +38,4 @@ def test5():
     print(dc)
 
 if __name__ == "__main__":
-    test5()
+    test3()
