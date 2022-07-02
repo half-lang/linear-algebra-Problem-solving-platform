@@ -1,0 +1,91 @@
+{% extends "login_demo.html" %}
+
+{% load static %}
+
+{% block head %}
+<title> 线性代数解题平台 </title>
+{% endblock head %}
+
+{% block body %}
+<header>
+      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
+        <div class="row">
+          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
+            <h1>线性代数登录平台</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- 主内容 -->
+<main>
+  <div class="container">
+    <div class="row">
+      <!-- 内容 -->
+      <div role="main" class="col-md-9">
+          <p class ="name1">Hello world!</p>
+          <p class ="name2">Hello Matrix!</p>
+      </div>
+
+      <!-- 侧边栏 -->
+      <div class="col-md-3" role="complementary">
+      <div class = "panel-body">
+          <form method="POST">
+              {% csrf_token %}
+              <label for="char">输入账号</label>
+              <div>
+                  <input type="text" name="username" >
+              </div>
+              <label for="char">输入密码</label>
+              <div>
+                  <input type="text" name="password">
+              </div>
+              <div clss = "col-md-2">
+                  <button type="submit" class ="btn btn-default" >提交</button>
+                  <a href="{% url 'logon' %}" type="button" class = "btn btn-default" id="regist">注册</a>
+              </div>
+          </form>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- 答案生成代码 -->
+
+{#<script>#}
+{#    $('#submit').click(() => {#}
+{#      $('#course-area').empty();#}
+{##}
+{#      let initHead = {#}
+{#        method: 'POST',#}
+{#        mode: 'same-origin',#}
+{#        headers: {'X-csrftoken': docCookies.getItem('csrftoken')},#}
+{#        body: JSON.stringify({username: $('#username').val(),password:$('#password').val()}),#}
+{#      };#}
+{##}
+{#      fetch(new Request("{% url 'login' %}", initHead))#}
+{#      .then(response => response.json())#}
+{#      .then(data => {#}
+{#        console.log(data);#}
+{#        loadHurwitzSolverData(data, document.getElementById('course-area'));#}
+{#        MathJax.typeset();#}
+{#      });#}
+{#    })#}
+{##}
+{#</script>#}
+<style>
+.name1{
+  width:600px;
+  line-height: 150px;
+  color: #00aa88;
+  font-size:100px;
+}
+.name2{
+    width:600px;
+  line-height: 150px;
+  color: #00aa88;
+  font-size:100px;
+}
+</style>
+{% endblock body %}

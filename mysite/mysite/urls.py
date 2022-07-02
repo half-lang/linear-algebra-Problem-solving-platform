@@ -18,8 +18,10 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('',  views.home_page),
     path('admin/', admin.site.urls),
+    path('login/',views.login),
+    path('logon/',views.logon,name='logon'),
+    path('',  views.home_page,name='home'),
 ]
 
 urlpatterns += [
@@ -31,5 +33,5 @@ urlpatterns += [
     path('metric/',include('metric.urls')),
     path('linspace/',include('linspace.urls')),
     path('poly/',include('poly.urls')),
+    path('initpage/',include('initpage.urls')),
 ]
-
