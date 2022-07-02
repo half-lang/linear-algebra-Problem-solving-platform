@@ -7,7 +7,15 @@
 {% endblock head %}
 
 {% block body %}
-
+<header>
+      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
+        <div class="row">
+          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
+            <h1>向量正交化、多项式</h1>
+          </div>
+        </div>
+      </div>
+    </header>
 <!-- 主内容 -->
 <main>
   <div class="container">
@@ -56,10 +64,9 @@
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
           <li class="list-group-item"><h3>快捷导航</h3></li>
-          <li class="list-group-item"><a href="{% url 'DeterminantSolverPage' %}">展开行列式</a></li>
-          <li class="list-group-item"><a href="#">线性方程</a></li>
-          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
-          <li class="list-group-item"><a href="#">二次型</a></li>
+          <li class="list-group-item"><a href="{% url 'SchmidtVectorSolverPage' %}">向量正交化</a></li>
+          <li class="list-group-item"><a href="{% url 'PolySolverPage' %}">计算矩阵多项式</a></li>
+          <li class="list-group-item"><a href="{% url 'SchmidtPolySolverPage' %}">多项式正交化</a></li>
         </ul>
       </div>
       

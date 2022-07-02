@@ -7,7 +7,15 @@
 {% endblock head %}
 
 {% block body %}
-
+<header>
+      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
+        <div class="row">
+          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
+            <h1>线性空间模块</h1>
+          </div>
+        </div>
+      </div>
+    </header>
 <!-- 主内容 -->
 <main>
   <div class="container">
@@ -52,10 +60,10 @@
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
           <li class="list-group-item"><h3>快捷导航</h3></li>
-          <li class="list-group-item"><a href="{% url 'LinDependenceSolverPage' %}">验证线性相关</a></li>
-          <li class="list-group-item"><a href="{% url 'BasisTransSolverPage' %}">对线性映射作基变换</a></li>
-          <li class="list-group-item"><a href="{% url 'MLIGSolverPage' %}">求极大无关向量组</a></li>
-          <li class="list-group-item"><a href="{% url 'SchmidtVectorSolverPage' %}">施密特正交化</a></li>
+          <li class="list-group-item"><a href="{% url 'LincombinationSolverPage' %}">验证线性组合</a></li>
+          <li class="list-group-item"><a href="{% url 'LinDependenceSolverPage' %}">判断向量组线性相关</a></li>
+          <li class="list-group-item"><a href="{% url 'BasisTransSolverPage' %}">对线性变换做基变换</a></li>
+          <li class="list-group-item"><a href="{% url 'MLIGSolverPage' %}">筛选法求极大线性无关组</a></li>
         </ul>
       </div>
       

@@ -9,6 +9,15 @@
 {% block body %}
 
 <!-- 主内容 -->
+<header>
+      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
+        <div class="row">
+          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
+            <h1>矩阵模块</h1>
+          </div>
+        </div>
+      </div>
+    </header>
 <main>
   <div class="container">
     <div class="row">
@@ -48,10 +57,10 @@
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
           <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
-          <li class="list-group-item"><a href="{% url 'EigenValueSolverPage' %}">求特征值</a></li>
-          <li class="list-group-item"><a href="{% url 'EigenVectorSolverPage' %}">求特征向量</a></li>
-          <li class="list-group-item"><a href="{% url 'HurwitzSolverPage' %}">判断正定二次型</a></li>
-          <li class="list-group-item"><a href="{% url 'QuadSolverPage' %}">二次型规范化</a></li>
+          <li class="list-group-item"><a href="{% url 'EigenValueSolverPage' %}">特征值</a></li>
+          <li class="list-group-item"><a href="{% url 'EigenVectorSolverPage' %}">特征向量</a></li>
+          <li class="list-group-item"><a href="{% url 'DiagSymmetricSolverPage' %}">矩阵对角化</a></li>
+          <li class="list-group-item"><a href="{% url 'InverseSolverPage' %}">矩阵求逆</a></li>
         </ul>
       </div>
       

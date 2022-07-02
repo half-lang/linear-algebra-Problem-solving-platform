@@ -3,9 +3,9 @@
 'EigenValueSolverPage' 'eigen/EigenValueSolverPage.html' 特征值界面
 'EigenVectorSolverPage' 'eigen/EigenVectorSolverPage.html' 特征向量
 'DiagSymmetricSolverPage' 'eigen/DiagSymmetricSolverPage.html' 矩阵对角化
+'InverseSolverPage' 'linequ/InverseSolverPage.html' 矩阵求逆
 'GESolverPage'  'linequ/GESolverPage.html' 高斯消去法求阶梯型矩阵
 'LinequSolverPage' 'linequ/LinequSolverPage.html' 通过增广矩阵解线性方程组
-'InverseSolverPage' 'linequ/InverseSolverPage.html' 矩阵求逆
 'LambdaLinSolverPage' 'linequ/LambdaLinSolverPage.html' 讨论含参线性方程组
 'MLIGSolverPage' 'linspace/MLIGSolverPage.html' 筛选法求极大线性无关组
 'LincombinationSolverPage' 'linspace/LincombinationSolverPage.html' 验证线性组合
