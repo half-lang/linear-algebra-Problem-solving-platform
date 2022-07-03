@@ -1,4 +1,25 @@
-{% extends "login_demo.html" %}
+
+{#{% if messages %}#}
+{#    <script>#}
+{#        {% for msg in messages %}#}
+{#            alert('{{ msg.message}}');#}
+{#        {% endfor %}#}
+{#    </script>#}
+{#    {% endif %}#}
+{#<!-- 答案生成代码 -->#}
+{#{% endblock body %}#}
+{##}
+{#{% extends "csstemplate.html" %}#}
+{##}
+{#{% load static %}#}
+{##}
+{#{% block head %}#}
+{#<title> 线性代数解题平台 </title>#}
+{#{% endblock head %}#}
+{##}
+{#{% block body %}#}
+
+{% extends "csstemplate.html" %}
 
 {% load static %}
 
@@ -7,49 +28,92 @@
 {% endblock head %}
 
 {% block body %}
-<header>
-      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
-        <div class="row">
-          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
-            <h1>线性代数登录平台</h1>
-          </div>
-        </div>
-      </div>
-    </header>
 <!-- 主内容 -->
-<main>
+    <main class="m1">
   <div class="container">
-    <div class="row">
+    <div class="row1">
       <!-- 内容 -->
-      <div role="main" class="col-md-9">
+      <div  class="row3">
           <p class ="name1">Hello world!</p>
           <p class ="name2">Hello Matrix!</p>
       </div>
-
-      <!-- 侧边栏 -->
-      <div class="col-md-3" role="complementary">
-      <div class = "panel-body">
-          <form method="POST">
+        <div class="row2" role="complementary">
+            <div class = "form">
+                <form method="POST">
               {% csrf_token %}
-              <label for="char">输入账号</label>
-              <div>
+              <div class="sub1">
+              <label for="char">账号</label>
                   <input type="text" name="username" >
               </div>
-              <label for="char">输入密码</label>
-              <div>
+              <div class="sub1">
+              <label for="char">密码</label>
                   <input type="text" name="password">
               </div>
-              <div clss = "col-md-2">
-                  <button type="submit" class ="btn btn-default" >提交</button>
-                  <button type="button" class = "btn btn-default" id="regist">注册</button>
+              <div class="sub1">
+              <label for="char">邮箱</label>
+                  <input type="text" name="email">
+              </div >
+              <div class="sub1">
+                  <label for="char">电话</label>
+                  <input type="text" name="telephone">
+              </div>
+              <div class="sub1">
+                  <label for="char">性别</label>
+                  <input type="radio" name="sex" value="男">男
+                  <input type="radio" name="sex" value="女">女
+              </div>
+              <div class="sub1">
+                  <label for="char">年龄</label>
+                  <input type="text" name="age">
+              </div>
+
+              <div class = "block2">
+                  <button type="submit" class = "btn btn-default" id="regist">注册</button>
               </div>
           </form>
+                </div>
       </div>
-      </div>
+    </div>
+
+        <!-- 侧边栏 -->
+
 
     </div>
   </div>
 </main>
+{#<main>#}
+{#  <div class="container">#}
+{#    <div class="row">#}
+{#      <!-- 内容 -->#}
+{#      <div role="main" class="col-md-9">#}
+{#          <p class ="name1">Hello world!</p>#}
+{#          <p class ="name2">Hello Matrix!</p>#}
+{#      </div>#}
+{##}
+{#      <!-- 侧边栏 -->#}
+{#      <div class="col-md-3" role="complementary">#}
+{#      <div class = "panel-body">#}
+{#          <form method="POST">#}
+{#              {% csrf_token %}#}
+{#              <label for="char">输入账号</label>#}
+{#              <div>#}
+{#                  <input type="text" name="username" >#}
+{#              </div>#}
+{#              <label for="char">输入密码</label>#}
+{#              <div>#}
+{#                  <input type="password" name="password">#}
+{#              </div>#}
+{#              <div clss = "col-md-2">#}
+{#                  <button type="submit" class ="btn btn-default" >提交</button>#}
+{#                  <a href="{% url 'logon' %}" type="button" class = "btn btn-default" id="regist">注册</a>#}
+{#              </div>#}
+{#          </form>#}
+{#      </div>#}
+{#      </div>#}
+{##}
+{#    </div>#}
+{#  </div>#}
+{#</main>#}
 
 <!-- 答案生成代码 -->
 
@@ -74,18 +138,84 @@
 {#    })#}
 {##}
 {#</script>#}
+    {% if messages %}
+    <script>
+        {% for msg in messages %}
+            alert('{{ msg.message}}');
+        {% endfor %}
+    </script>
+    {% endif %}
 <style>
 .name1{
   width:600px;
   line-height: 150px;
-  color: #00aa88;
-  font-size:100px;
+  color: white;
+    text-shadow:
+    0px 0px 20px pink,
+    0px 0px 10px orange,
+    0px 0px 10px orangered,
+    0px 0px 10px red;
+  font-size:90px;
+    margin-top: 180px;
 }
 .name2{
     width:600px;
   line-height: 150px;
-  color: #00aa88;
-  font-size:100px;
+  color: white;
+    text-shadow:
+    0px 0px 20px pink,
+    0px 0px 10px orange,
+    0px 0px 10px orangered,
+    0px 0px 10px red;
+  font-size:90px;
+     margin-bottom: 100px;
 }
+.row1{
+    width: 1000px;
+    height: 700px;
+}
+
+.row2{
+    width: 300px;
+    height: 500px;
+    display: table-cell;
+}
+.row3{
+    width: 700px;
+    height: 700px;
+    display: table-cell;
+}
+.form{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-top: 120px;
+    font-size: 20px;
+    border: solid;
+    border-color: steelblue;
+    text-align: center;
+}
+.block2{
+    margin-top: 40px;
+    text-align: center;
+}
+.sub1{
+     color: white;
+    text-shadow:
+    0px 0px 20px pink,
+    0px 0px 10px orange,
+    0px 0px 10px orangered,
+    0px 0px 10px red;
+    margin-top: 25px;
+}
+.m1{
+            margin-top: 200px;
+            background-image: url(../static/image/baner-dec-right.png),
+                              url(../static/image/baner-dec-left.png);
+            background-repeat: no-repeat;
+            background-position:100% 50%,0% 50%;
+            background-size: 50%,50%;
+            background-attachment:scroll;
+        }
 </style>
 {% endblock body %}

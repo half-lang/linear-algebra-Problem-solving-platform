@@ -4,59 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="lam's contributors">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="static/css/css2.css" rel="stylesheet">
 
+  <title>LAM线性代数解题平台</title>
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
- <style>
-   body {
-
-      background-image: url("");
-
-      background-position: center 0;
-
-      background-repeat: no-repeat;
-
-      background-attachment: fixed;
-
-      background-size: cover;
-
-      -webkit-background-size: cover;
-
-      -o-background-size: cover;
-
-      -moz-background-size: cover;
-
-      -ms-background-size: cover;
-
-}
- </style>
-
-
-
-
-
-  <title>线性代数解题平台</title>
-
-  {% load static %}
-
-  <!-- Bootstrap core CSS -->
-
-  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-  <!-- Optional Bootstrap Theme -->
-
-  <link href="data:text/css;charset=utf-8," data-href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}" rel="stylesheet" id="bs-theme-stylesheet">
-
-  <!-- Documentation extras -->
-
-  <link href="{% static 'bootstrap/css/docs.min.css' %}" rel="stylesheet">
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="">
-  <link rel="icon" href="">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/css/fontawesome.css">
+    <link rel="stylesheet" href="static/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="static/css/animated.css">
+    <link rel="stylesheet" href="static/css/owl.css">
 
   <script>
     MathJax = {
@@ -69,114 +30,372 @@
   </script>
 </head>
 
+
 <body>
-  <header class="navbar navbar-static-top bs-docs-nav" id="top">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar"
-          aria-controls="bs-navbar" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/" class="navbar-brand">LAM</a>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <nav id="bs-navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/">首页</a>
-          </li>
-          <li>
-            <a href="https://github.com/HelloMrGeorge/LinearAlgebraMachine/tree/main/documentation">说明文档</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">
-              联系我们 <span class="caret"></span>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="" class="logo">
+              <h4>线性代数解题平台<span>LAM</span></h4>
             </a>
-            <ul class="dropdown-menu">
-              <li><a href="https://v5.bootcss.com/">v5</a></li>
-              <li><a href="https://v4.bootcss.com/">v4</a></li>
-              <li class="divider"></li>
-              <li class="active"><a href="https://v3.bootcss.com/">v3</a></li>
-              <li><a href="https://v2.bootcss.com/">v2</a></li>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="login">用户登录</a></li>
+              <li class="scroll-to-section"><a href="#about">问题分类</a></li>
+              <li class="scroll-to-section"><a href="#services">用户满意度</a></li>
+              <li class="scroll-to-section"><a href="#contact">联系我们</a></li>
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li>
             </ul>
-          </li></ul>
-      </nav>
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
-  <div class="bs-docs-header" tabindex="-1" style="background-color:rgb(32, 189, 129); background-image:unset">
-    <div class="container">
-      <h1>线性代数解题平台</h1>
-      <!-- <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p> -->
-
-    </div>
-  </div>
-
+  <!-- ***** Header Area End ***** -->
 
   <!-- 主内容 -->
-<main>
-  <div class="container">
-    <div class="row">
-      <!-- 内容 -->
-      <div role="main" class="col-md-10">         
-            <form class="form-horizontal"  >
-              <div class="bs-glyphicons">
-                <ul class="bs-glyphicons-list">
+  {#  home#}
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <h6>欢迎来到线性代数解题平台</h6>
+                <h2> <span>LAM</span> 让 <em>线性代数</em>  问题变得更简单</h2>
+                <p>线性代数作为一门各个大学理工科学生的必修课，在同学们的日常生活中占据着日益重要的地位。因此，开发一个能够利用计算机模仿人类对线性代数求解的解题平台，以计算机代数理论为基础，用符号计算的方式进行计算，解决线性代数课程中程序化的问题，实现结题过程与结果的输出，能够更好地促进《线性代数》的智慧教育，帮助同学们理解线性代数的思想与结题思维。</p>
+                <form id="search" action="#" method="GET">
+                  <fieldset>
+                    <a href="#blog">
+                      <button type="button" class="main-button">用户登录</button>
+                    </a>
 
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'DeterminantSolverPage' %}">行列式</a></h3>
-                  </li>
-                
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'InverseSolverPage' %}">矩阵</a></h3>
-                  </li>
-
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'GESolverPage' %}">线性方程组</a></h3>
-                  </li>
-            
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'SchmidtVectorSolverPage' %}">向量正交化、多项式</a></h3>
-                  </li>
-                
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'LincombinationSolverPage' %}">向量空间</a></h3>
-                  </li>
-
-                  <li style="height: 80px;width: 400px;margin: 30px 20px;border:2px solid #548acf;padding:10px 40px;border-radius:25px">
-                    <h3 class="glyphicon-class"><a href="{% url 'QuadSolverPage' %}">二次型</a></h3>
-                  </li>
-
-                </ul>
+                  </fieldset>
+                </form>
               </div>
-            </form>          
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="static/picture/banner-right-image.png" alt="team meeting">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-        
-
-      
-
-      <!-- 侧边栏 -->
-      <div class="col-md-2" role="complementary">
-        <ul class="list-group">
-          <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
-          <li class="list-group-item"><a href="#">行列式</a></li>
-          <li class="list-group-item"><a href="#">线性方程</a></li>
-          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
-          <li class="list-group-item"><a href="#">二次型</a></li>
-        </ul>
-      </div>
-      
     </div>
   </div>
-</main>
 
-  
- 
+{#  登录注册界面#}
+  <div id="blog" class="our-blog section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="top-dec">
+            <img src="static/picture/blog-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="left-image">
+            <a href="#"><img src="static/picture/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
+            <div class="info">
+              <div class="inner-content">
+                <ul>
+                  <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
+                  <li><i class="fa fa-users"></i> TemplateMo</li>
+                  <li><i class="fa fa-folder"></i> Branding</li>
+                </ul>
+                <a href="#"><h4>SEO Agency &amp; Digital Marketing</h4></a>
+                <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore magna...</p>
+                <div class="main-blue-button">
+                  <a href="#">Discover More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="right-list">
+            <ul>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
+                  <a href="#"><h4>New Websites &amp; Backlinks</h4></a>
+                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="static/picture/blog-thumb-01.jpg" alt=""></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
+                  <a href="#"><h4>SEO Analysis &amp; Content Ideas</h4></a>
+                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="static/picture/blog-thumb-01.jpg" alt=""></a>
+                </div>
+              </li>
+              <li>
+                <div class="left-content align-self-center">
+                  <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
+                  <a href="#"><h4>SEO Tips &amp; Digital Marketing</h4></a>
+                  <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                </div>
+                <div class="right-image">
+                  <a href="#"><img src="static/picture/blog-thumb-01.jpg" alt=""></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{#  问题分类界面#}
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <img src="static/picture/about-left-image.png" alt="person graphic">
+          </div>
+        </div>
+        <div class="col-lg-8 align-self-center">
+          <div class="services">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-01.png" alt="reporting">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'DeterminantSolverPage' %}">
+                      <h4>行列式问题</h4>
+                    </a>
+                    <p>主要解决行列式的展开、多种方法求解行列式的值等问题</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-01.png" alt="reporting">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'InverseSolverPage' %}">
+                      <h4>矩阵问题</h4>
+                    </a>
+                    <p>主要解决矩阵对角化、特征值求解、特征向量求解、正定二次型判断以及二次型规范化等问题</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-02.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'GESolverPage' %}">
+                      <h4>线性方程组问题</h4>
+                    </a>
+                    <p>主要解决矩阵对角化、特征值求解、特征向量求解、正定二次型判断以及二次型规范化等问题</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-03.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'DiagSymmetricSolverPage' %}">
+                      <h4>矩阵分解问题</h4>
+                    </a>
+                    <p>主要解决矩阵对角化、特征值求解、特征向量求解、正定二次型判断以及二次型规范化等问题</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-01.png" alt="reporting">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'LincombinationSolverPage' %}">
+                      <h4>向量空间问题</h4>
+                    </a>
+                    <p>主要解决线性组合、线性相关、线性方程、特征值与特征向量以及施密特正交化等问题</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                  <div class="icon">
+                    <img src="static/picture/service-icon-04.png" alt="">
+                  </div>
+                  <div class="right-text">
+                    <a href="{% url 'testPage' %}">
+                      <h4>测试页面</h4>
+                    </a>
+                    <p>输入您想解决的问题</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {#  用户满意度界面#}
+  <div id="services" class="our-services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="left-image">
+            <img src="static/picture/services-left-image.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="section-heading">
+            <h2>我们的用户使用 <em>LAM</em> 后的反馈</h2>
+            <h3>用户满意度介绍</h3>
+            <p>用户对问答系统的推荐问题以及智能回答进行满意度评价，满意度评价指标主要有： 推荐问题涵盖度、隐私保护性、答案准确性等。 针对上述满意度的评价指标，给出1-10级的打分规则。用户根据自我体验与问题解答情况进行上述满意度打分。1级为最不满意，10级为最满意。根据上述指标的各个得分，计算最终用户满意度评分。</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="third-bar progress-skill-bar">
+                <h4>结果准确性</h4>
+                <span>94%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="second-bar progress-skill-bar">
+                <h4>页面满意度</h4>
+                <span>88%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="first-bar progress-skill-bar">
+                <h4>问题覆盖度</h4>
+                <span>84%</span>
+                <div class="filled-bar"></div>
+                <div class="full-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{#  联系我们界面#}
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <div class="section-heading">
+            <h2>您的建议对我们十分重要！</h2>
+            <p>您的建议对我们十分重要，请随时向我们发送有关您网站需求的信息，我们会及时处理与改进，感谢~</p>
+            <div class="phone-info">
+              <h4>为提供您的建议，您可以拨打: <span><i class="fa fa-phone"></i> <a href="#">111-222-333</a></span></h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="姓名" autocomplete="on" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="昵称" autocomplete="on" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="邮箱" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" type="text" class="form-control" id="message" placeholder="建议" required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button ">发送</button>
+                </fieldset>
+              </div>
+            </div>
+            <div class="contact-dec">
+              <img src="static/picture/contact-decoration.png" alt="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <p>Copyright &copy; 2022.Team#38 name All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="static/js1/jquery.min.js"></script>
+  <script src="static/js1/bootstrap.bundle.min.js"></script>
+  <script src="static/js1/owl-carousel.js"></script>
+  <script src="static/js1/animation.js"></script>
+  <script src="static/js1/imagesloaded.js"></script>
+  <script src="static/js1/templatemo-custom.js"></script>
   
 </body>
 

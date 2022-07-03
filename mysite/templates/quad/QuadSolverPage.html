@@ -7,17 +7,13 @@
 {% endblock head %}
 
 {% block body %}
-<header>
-      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
-        <div class="row">
-          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
-            <h1>二次型</h1>
-          </div>
-        </div>
-      </div>
-    </header>
+<style type="text/css">
+        .m1{
+            margin-top: 200px;
+        }
+    </style>
 <!-- 主内容 -->
-<main>
+<main class="m1">
   <div class="container">
     <div class="row">
       <!-- 内容 -->
@@ -64,8 +60,11 @@
       <!-- 侧边栏 -->
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
-          <li class="list-group-item"><h3><a href="#">快捷链接</a></h3></li>
-          <li class="list-group-item"><a href="{% url 'HurwitzSolverPage' %}">判断正定(负定)矩阵</a></li>
+          <li class="list-group-item"><h3><a href="#">相关链接</a></h3></li>
+          <li class="list-group-item"><a href="{% url 'HurwitzSolverPage' %}">判断正定矩阵</a></li>
+          <li class="list-group-item"><a href="#">行列式</a></li>
+          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
+          <li class="list-group-item"><a href="#">二次型</a></li>
         </ul>
       </div>
       

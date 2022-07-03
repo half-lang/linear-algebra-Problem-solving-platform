@@ -7,17 +7,19 @@
 {% endblock head %}
 
 {% block body %}
-<header>
-      <div class="jumbotron" style="background-color:rgb(32, 189, 129)">
-        <div class="row">
-          <div class="col-md-offset-1" style="color:rgb(255, 255, 255)">
-            <h1>行列式模块</h1>
-          </div>
-        </div>
-      </div>
-    </header>
+<style type="text/css">
+        .m1{
+            margin-top: 200px;
+            background-image: url(../../static/image/baner-dec-right.png),
+                              url(../../static/image/baner-dec-left.png);
+            background-repeat: no-repeat;
+            background-position:100% 50%,0% 50%;
+            background-size: 50%,50%;
+            background-attachment:scroll;
+        }
+    </style>
 <!-- 主内容 -->
-<main>
+<main class="m1">
   <div class="container">
     <div class="row">
       <!-- 内容 -->
@@ -57,6 +59,9 @@
         <ul class="list-group">
           <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
           <li class="list-group-item"><a href="{% url 'DeterminantSolverPage' %}">展开行列式</a></li>
+          <li class="list-group-item"><a href="#">线性方程</a></li>
+          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
+          <li class="list-group-item"><a href="#">二次型</a></li>
         </ul>
       </div>
       
