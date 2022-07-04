@@ -83,7 +83,6 @@ class HurwitzSolver(CoreSolver):
         count = 1
         negativeFlag = True
         for x in self.minor:
-            print(x,x*(-1)**count)
             if x*(-1)**count < 0:
                 negativeFlag = False
                 break
@@ -92,7 +91,6 @@ class HurwitzSolver(CoreSolver):
             self.result = 'positive'
         elif negativeFlag:
             self.result = 'negative'
-
     def toDict(self) -> dict:
         js = {}
         js['mat'] = latex(self.mat)

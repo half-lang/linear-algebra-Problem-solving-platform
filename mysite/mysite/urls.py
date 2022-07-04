@@ -19,8 +19,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',views.login,name='login'),
-    path('logon/',views.logon,name='logon'),
+    #path('login/',views.login,name='login'),
+    #path('logon/',views.logon,name='logon'),
     path('',  views.home_page,name='home'),
 ]
 
@@ -33,5 +33,5 @@ urlpatterns += [
     path('metric/',include('metric.urls')),
     path('linspace/',include('linspace.urls')),
     path('poly/',include('poly.urls')),
-    path('initpage/',include('initpage.urls')),
+    #path('initpage/',include('initpage.urls')),
 ]

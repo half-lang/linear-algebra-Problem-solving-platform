@@ -3,7 +3,10 @@ from django.http import JsonResponse
 from linalgpy.latex.parser import matParser, exprParser
 from linalgpy.poly import poly
 import json,os
-from FormulaRecognition import formulaRecognition
+
+
+dir=os.getcwd()
+
 # Create your views here.
 
 def PolySolverPage(request):
@@ -40,7 +43,7 @@ def files(request):
     img_name = f'{mobile}{ext}'
     print(img_name)
     # 从配置文件中载入图片保存路径
-    img_path = os.path.join('F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\static/img/', img_name)
+    img_path = os.path.join(dir+'/static/img/', img_name)
     # 写入文件
     with open(img_path, 'ab') as fp:
         # 如果上传的图片非常大，就通过chunks()方法分割成多个片段来上传

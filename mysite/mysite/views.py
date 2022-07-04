@@ -1,11 +1,11 @@
 from django.shortcuts import render,redirect
 from django.http import JsonResponse
 import json
-from initpage.models import User
+#from initpage.models import User
 from django.contrib import messages
 def home_page(request):
     return render(request, 'HOME.html')
-
+'''
 def login(request):
     if request.method == 'POST':
         print("进入页面")
@@ -42,3 +42,4 @@ def logon(request):
         messages.error(request, "注册成功")
         return redirect('login')
     return render(request,'log_on.html')
+'''

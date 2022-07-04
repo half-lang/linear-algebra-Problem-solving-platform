@@ -211,10 +211,10 @@ function loadHurwitzSolverData(data, ele) {
     createDefaultPanel(ele, `$ A = ${data.mat} $`);
     HurwitzPart(data, ele);
     let content = '$A$既不正定也不负定。';
-    if(data.result == 'postive') {
+    if(data.result == 'positive') {
         content = '所以$A$正定。';
     } else if(data.result == 'negative') {
-        content = '所以$A$负定。';
+        content = '所以$A$负。';
     }
     createDefaultPanel(ele, content);
 

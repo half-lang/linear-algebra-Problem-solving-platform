@@ -58,10 +58,9 @@
       <div class="col-md-3" role="complementary">
         <ul class="list-group">
           <li class="list-group-item"><h3><a href="#">快捷导航</a></h3></li>
-          <li class="list-group-item"><a href="#">行列式</a></li>
-          <li class="list-group-item"><a href="#">线性方程</a></li>
-          <li class="list-group-item"><a href="#">特征值与特征向量</a></li>
-          <li class="list-group-item"><a href="#">二次型</a></li>
+          <li class="list-group-item"><a href="{% url 'GESolverPage' %}">高斯消去法求阶梯型矩阵</a></li>
+          <li class="list-group-item"><a href="{% url 'LinequSolverPage' %}">通过增广矩阵解线性方程组</a></li>
+          <li class="list-group-item"><a href="{% url 'LambdaLinSolverPage' %}">讨论含参线性方程组</a></li>
         </ul>
       </div>
   </div>
