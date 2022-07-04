@@ -11,15 +11,18 @@ def login(request):
         print("进入页面")
         username = request.POST.get('username')
         password = request.POST.get('password')
-        corr_username = User.objects.filter(username=username).first()
-        print(corr_username)
-        print("获取到信息")
-        if username == corr_username.username and password == corr_username.password:
-            print("登录成功")
-            return redirect("home")
-        else:
-            messages.error(request,"登录失败")
-            print("登录失败")
+        if username!=None and password!=None:
+            corr_username = User.objects.filter(username=username).first()
+            print(corr_username)
+            print("获取到信息")
+            if username == corr_username.username and password == corr_username.password:
+                print("登录成功")
+                return redirect("home")
+            else:
+                messages.error(request,"登录失败")
+                print("登录失败")
+    else:
+        return render(request, 'log_in.html')
     return render(request,'log_in.html')
 
 def logon(request):
