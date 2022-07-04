@@ -53,6 +53,11 @@
               </div>
 
             </form>
+              <form method="post" enctype="multipart/form-data" action="{% url 'add' %}">
+                                {% csrf_token %}
+                                    <input name="img" type="file" id="icon_input" style="width:700px;display:inline-block;padding-left:500px">
+                                <button type="submit" class="btn btn-default" style="width:100px;display:inline-block">上传图片</button>
+                            </form>
           </div>
         </div>
 
