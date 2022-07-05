@@ -3,9 +3,8 @@ from django.http import JsonResponse
 from linalgpy.latex.parser import matParser, exprParser
 from linalgpy.poly import poly
 import json,os
-
-
-dir=os.getcwd()
+from FormulaRecognition import formulaRecognition
+dir=os.getcwd().replace('\\','/')
 
 # Create your views here.
 

@@ -7,11 +7,11 @@ from PIL import Image
 from numpy import *
 import cv2
 import numpy as np
-
-
+import os
+dir=os.getcwd().replace('\\','/')
 def formulaRecognition(img_name):
     torch.backends.cudnn.benchmark = False
-    img_path = 'F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\static/img/' + img_name
+    img_path = dir+'/static/img/' + img_name
 
 
     def cmp_result(label,rec):
@@ -42,7 +42,7 @@ def formulaRecognition(img_name):
         return lexicon
 
     # valid_datasets=['./offline-train.pkl', './train_caption.txt']
-    dictionaries=['F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\poly\label/dictionary.txt']
+    dictionaries=[dir+'/poly/label/dictionary.txt']
     batch_Imagesize=16
     valid_batch_Imagesize=16
     batch_size_t=1
@@ -74,7 +74,7 @@ def formulaRecognition(img_name):
     '''
     label_map = []
 
-    with open('F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\poly\label/caption.txt', 'r') as f:
+    with open(dir+'\poly\label/caption.txt', 'r') as f:
         caption = f.readlines()
 
     label_name = img_name.split('.')[0][:-2]
@@ -185,8 +185,8 @@ def formulaRecognition(img_name):
     encoder = encoder.cuda()
     attn_decoder1 = attn_decoder1.cuda()
 
-    encoder.load_state_dict(torch.load('F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\poly\model/encoder_lr0.00010_GN_te1_d05_SGD_bs6_mask_conv_bn_b_xavier.pkl'))
-    attn_decoder1.load_state_dict(torch.load('F:\homework\暑假实训\linear-algebra-Problem-solving-platform\mysite\poly\model/attn_decoder_lr0.00010_GN_te1_d05_SGD_bs6_mask_conv_bn_b_xavier.pkl'))
+    encoder.load_state_dict(torch.load(dir+'\poly\model/encoder_lr0.00010_GN_te1_d05_SGD_bs6_mask_conv_bn_b_xavier.pkl'))
+    attn_decoder1.load_state_dict(torch.load(dir+'\poly\model/attn_decoder_lr0.00010_GN_te1_d05_SGD_bs6_mask_conv_bn_b_xavier.pkl'))
 
     total_dist = 0
     total_label = 0
@@ -303,20 +303,9 @@ def formulaRecognition(img_name):
             if dist == 0:
                 total_line_rec = total_line_rec+ 1
 
-            # print('step is %d' % (step_t))
-            # print('prediction is ')
-            #print(''.join(prediction_real))
-            # print(prediction_real)
-            # print('the truth is')
-            #print(''.join(label_real))
-            # print(label_real)
-            return prediction_real, label_real
-            # print('the wer is %.5f' % (wer_step))
 
-            # label_sub = []
-            # prediction_sub = []
-            # label_real = []
-            # prediction_real = []
+            return prediction_real, label_real
+
 
 
     
